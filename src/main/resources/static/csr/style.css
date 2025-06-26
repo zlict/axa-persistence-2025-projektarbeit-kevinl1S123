@@ -1,0 +1,150 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #23232b;
+  color: #fff;
+  animation: rotateIn 2s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(11720deg) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+input:not([type='checkbox']), select, textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2e2e38;
+  color: #fff;
+  font-size: 1rem;
+}
+
+input[type='submit'] {
+  background: linear-gradient(90deg, #ff4b8b 0%, #ff6a00 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+input[type='submit']:hover {
+  background: linear-gradient(90deg, #ff6a00 0%, #ff4b8b 100%);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #2e2e38;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+thead {
+  background: #ff4b8b;
+  color: #fff;
+}
+
+thead th {
+  padding: 1rem 0.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+tbody td {
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid #393949;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+nav {
+  margin-bottom: 2rem;
+  background: #2e2e38;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a {
+  padding: 1rem 2rem;
+  display: inline-block;
+  color: #ff4b8b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 6px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  color: #fff;
+  background: #ff4b8b;
+}
+
+h2 {
+  color: #ff4b8b;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+label {
+  color: #ff4b8b;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+input[type='checkbox'] {
+  accent-color: #ff4b8b;
+}
+
+button {
+  background: #393949;
+  color: #ff4b8b;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: #ff4b8b;
+  color: #fff;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
