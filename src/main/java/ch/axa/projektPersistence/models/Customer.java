@@ -21,17 +21,17 @@ public class Customer {
     private Long id;
 
     @NotBlank(message = "Cant be empty")
-    @Column(name = "description", length = 5000)
+    @Column(name = "firstName", length = 5000)
     private String firstName;
 
     @NotBlank(message = "Cant be empty")
-    @Column(name = "description", length = 5000)
+    @Column(name = "lastName", length = 5000)
     private String lastName;
 
-    @Column(name = "description", length = 5000)
+    @Column(name = "email", length = 5000)
     private String email;
 
-    @Column(name = "description", length = 5000)
+    @Column(name = "phoneNumber", length = 5000)
     private String phoneNumber;
 
     @OneToMany(mappedBy = "customer")
@@ -85,6 +85,5 @@ public class Customer {
         this.vertrage = vertrage;
     }
 
-    
 
 }

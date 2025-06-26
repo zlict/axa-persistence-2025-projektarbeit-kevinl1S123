@@ -1,5 +1,5 @@
 {
-    "name": "AXA Punchclock 2025",
+    "name": "Projekt Persistence",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",

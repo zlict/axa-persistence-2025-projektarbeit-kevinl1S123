@@ -23,7 +23,7 @@ public class DamageType {
     private Long id;
 
     @NotBlank(message = "Cant be empty")
-    @Column(name = "description", length = 5000)
+    @Column(name = "type", length = 5000)
     private String type;
 
     @ManyToMany(mappedBy = "damageTypes")
