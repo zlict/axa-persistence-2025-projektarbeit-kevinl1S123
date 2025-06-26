@@ -1,4 +1,7 @@
-package ch.axa.punchclock.models;
+package ch.axa.projektPersistence.models;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -7,26 +10,25 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "police")
-public class Police {
+@Table(name = "damageType")
+public class DamageType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "type")
+    @NotBlank(message = "Cant be empty")
+    @Column(name = "description", length = 5000)
     private String type;
 
-    @Column(name = "amountInsured")
-    private double amountInsured;
-
-    @ManyToOne
-    @JsonIgnoreProperties(value = "policen")
-    private Vertrag vertrag;
+    @ManyToMany(mappedBy = "damageTypes")
+    @JsonIgnoreProperties("damageTypes")
+    private Set<Claim> claims = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -44,22 +46,13 @@ public class Police {
         this.type = type;
     }
 
-    public double getAmountInsured() {
-        return amountInsured;
+    public Set<Claim> getClaims() {
+        return claims;
     }
 
-    public void setAmountInsured(double amountInsured) {
-        this.amountInsured = amountInsured;
+    public void setClaims(Set<Claim> claims) {
+        this.claims = claims;
     }
-
-    public Vertrag getVertrag() {
-        return vertrag;
-    }
-
-    public void setVertrag(Vertrag vertrag) {
-        this.vertrag = vertrag;
-    }
-
 
     
 }

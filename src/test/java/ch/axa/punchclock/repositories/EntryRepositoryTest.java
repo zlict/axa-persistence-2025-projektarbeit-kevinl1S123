@@ -10,7 +10,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import ch.axa.punchclock.models.Entry;
+import ch.axa.projektPersistence.models.Entry;
 import jakarta.inject.Inject;
 
 @SpringBootTest

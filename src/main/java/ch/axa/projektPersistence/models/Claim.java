@@ -1,4 +1,4 @@
-package ch.axa.punchclock.models;
+package ch.axa.projektPersistence.models;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
