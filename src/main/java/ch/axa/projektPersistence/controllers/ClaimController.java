@@ -12,7 +12,10 @@ public class ClaimController {
     private ClaimRepository claimRepository;
 
     @GetMapping
-    public Iterable<Claim> getAllClaims() {
+    public Iterable<Claim> getAllClaims(@RequestParam(required = false) String sortByDate) {
+        if (sortByDate != null) {
+            return claimRepository.findAllSortedByDate(sortByDate);
+        }
         return claimRepository.findAll();
     }
 
