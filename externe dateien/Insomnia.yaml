@@ -1,0 +1,680 @@
+type: collection.insomnia.rest/5.0
+name: Persistence Projekt
+meta:
+  id: wrk_75945be2c2654f3da897c941c9f673aa
+  created: 1751024177335
+  modified: 1751024177335
+collection:
+  - name: Vertrage
+    meta:
+      id: fld_dea4c987b3fa43929270dc02c12281af
+      created: 1751026759807
+      modified: 1751026855386
+      sortKey: -1751026759807
+    children:
+      - url: http://localhost:8080/vertrage/1
+        name: get vertrag
+        meta:
+          id: req_47578c6244ec4dfe9cecba5583d9d3d8
+          created: 1751026846246
+          modified: 1751026966689
+          isPrivate: false
+          sortKey: -1751026846246
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/vertrage/1
+        name: put vertrag
+        meta:
+          id: req_5e4cc3538a844ff5902b963a9c466837
+          created: 1751026910431
+          modified: 1751027001771
+          isPrivate: false
+          sortKey: -1749983866746
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/vertrage/1
+        name: delete vertrag
+        meta:
+          id: req_4087baddaf5743298d7cebbc19d7810d
+          created: 1751026921752
+          modified: 1751026998846
+          isPrivate: false
+          sortKey: -1749462376996
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/vertrage
+        name: get vertrage
+        meta:
+          id: req_cf1b5d66a97343d8a1f2a24fec062683
+          created: 1751026928209
+          modified: 1751026994798
+          isPrivate: false
+          sortKey: -1749201632121
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/vertrage
+        name: post vertrage
+        meta:
+          id: req_35ad4ca89d75434396e4e41da1e15aee
+          created: 1751026935789
+          modified: 1751026991349
+          isPrivate: false
+          sortKey: -1749071259683.5
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      url:
+        base_url: http://localhost:8080
+  - name: Policen
+    meta:
+      id: fld_bd504301b300423ba81776b94305c3ad
+      created: 1751027011474
+      modified: 1751027011474
+      sortKey: -1749419491147
+    children:
+      - url: http://localhost:8080/polices/1
+        name: get police
+        meta:
+          id: req_046d22f0856241a98d66cab744a611ad
+          created: 1751027011475
+          modified: 1751027274964
+          isPrivate: false
+          sortKey: -1751026846246
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/polices/1
+        name: put police
+        meta:
+          id: req_4adbef1a648c4b399b122bb5eb0443c0
+          created: 1751027011476
+          modified: 1751027284353
+          isPrivate: false
+          sortKey: -1749983866746
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/polices
+        name: get police
+        meta:
+          id: req_2a1d88aebc79431ca6edbd7ae1426a1f
+          created: 1751027011477
+          modified: 1751027296570
+          isPrivate: false
+          sortKey: -1749201632121
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/polices/1
+        name: delete police
+        meta:
+          id: req_88f7b1afa059441a8aa3b22afc30d774
+          created: 1751027011477
+          modified: 1751027288109
+          isPrivate: false
+          sortKey: -1749462376996
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/polices
+        name: post police
+        meta:
+          id: req_8716d060693a444594651ea03eb66faa
+          created: 1751027011478
+          modified: 1751027299601
+          isPrivate: false
+          sortKey: -1749071259683.5
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      url:
+        base_url: http://localhost:8080
+  - name: Payment
+    meta:
+      id: fld_9a11cbe0243b4a1b8da0b0e5d53770ee
+      created: 1751027042355
+      modified: 1751027042355
+      sortKey: -1748615856817
+    children:
+      - url: http://localhost:8080/payments/1
+        name: get payment
+        meta:
+          id: req_dc7606b358e745a493a91fac118102f3
+          created: 1751027042356
+          modified: 1751027308634
+          isPrivate: false
+          sortKey: -1751026846246
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/payments/1
+        name: put payment
+        meta:
+          id: req_2e539d26a049467a9e4c275d0e5547ed
+          created: 1751027042357
+          modified: 1751027321663
+          isPrivate: false
+          sortKey: -1749983866746
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/payments
+        name: get payment
+        meta:
+          id: req_9b322abc7a754947b165b29bf1d503e9
+          created: 1751027042357
+          modified: 1751027328560
+          isPrivate: false
+          sortKey: -1749201632121
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/payments/1
+        name: delete payment
+        meta:
+          id: req_16505ca099a54291b20a89caff7fe3a0
+          created: 1751027042359
+          modified: 1751027325396
+          isPrivate: false
+          sortKey: -1749462376996
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/payments
+        name: post payment
+        meta:
+          id: req_8f5db95b63dd40ed98fc75e4c31dc35d
+          created: 1751027042359
+          modified: 1751027332078
+          isPrivate: false
+          sortKey: -1749071259683.5
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      url:
+        base_url: http://localhost:8080
+  - name: damagetype
+    meta:
+      id: fld_cdc581b9f18e4b588cddf7082f977248
+      created: 1751027072911
+      modified: 1751027072911
+      sortKey: -1748214039652
+    children:
+      - url: http://localhost:8080/damagetypes/1
+        name: get damagetype
+        meta:
+          id: req_38ea970814cb4dd396864221a1adc086
+          created: 1751027072912
+          modified: 1751027341814
+          isPrivate: false
+          sortKey: -1751026846246
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/damagetypes/1
+        name: put damagetype
+        meta:
+          id: req_3c5eaadb6734415e826f85e2b131c752
+          created: 1751027072912
+          modified: 1751027346473
+          isPrivate: false
+          sortKey: -1749983866746
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/damagetypes
+        name: get damagetype
+        meta:
+          id: req_0074761ce58f4f6e85ba794d9493d307
+          created: 1751027072913
+          modified: 1751027353082
+          isPrivate: false
+          sortKey: -1749201632121
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/damagetypes/1
+        name: delete damagetype
+        meta:
+          id: req_0ca4468d66e34649b0d5a6bded81a7df
+          created: 1751027072914
+          modified: 1751027349137
+          isPrivate: false
+          sortKey: -1749462376996
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/damagetypes
+        name: post damagetype
+        meta:
+          id: req_dd85e5b2698f46ca88e6b3bec7730c62
+          created: 1751027072915
+          modified: 1751027357558
+          isPrivate: false
+          sortKey: -1749071259683.5
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      url:
+        base_url: http://localhost:8080
+  - name: customer
+    meta:
+      id: fld_5c300186228049339fdadc3a6117c8de
+      created: 1751027101463
+      modified: 1751027101463
+      sortKey: -1748013131069.5
+    children:
+      - url: http://localhost:8080/customers/1
+        name: get customer
+        meta:
+          id: req_c4f5281af4584d2bb80cd2d10b9a2ece
+          created: 1751027101464
+          modified: 1751027367544
+          isPrivate: false
+          sortKey: -1751026846246
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/customers/1
+        name: put customer
+        meta:
+          id: req_fb13253923ee416a999fd36007e9382a
+          created: 1751027101465
+          modified: 1751027371708
+          isPrivate: false
+          sortKey: -1749983866746
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/customers/1
+        name: delete customer
+        meta:
+          id: req_15c312ae383b44a49e60b7e3838edf83
+          created: 1751027101466
+          modified: 1751027375325
+          isPrivate: false
+          sortKey: -1749462376996
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/customers
+        name: get customer
+        meta:
+          id: req_c6b65678abb94131b35118b1e8da4a71
+          created: 1751027101466
+          modified: 1751027378508
+          isPrivate: false
+          sortKey: -1749201632121
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/customers
+        name: post customer
+        meta:
+          id: req_6a9f933b967048d89c774a6790126527
+          created: 1751027101467
+          modified: 1751027382940
+          isPrivate: false
+          sortKey: -1749071259683.5
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      url:
+        base_url: http://localhost:8080
+  - name: Claim
+    meta:
+      id: fld_440bed3c69fb49359f4435ea1eac2cc5
+      created: 1751027132046
+      modified: 1751027132046
+      sortKey: -1747912676778.25
+    children:
+      - url: http://localhost:8080/claims/1
+        name: get claim
+        meta:
+          id: req_082cf9a14b2c48a99f00630d7738d736
+          created: 1751027132047
+          modified: 1751027388741
+          isPrivate: false
+          sortKey: -1751026846246
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/claims/1
+        name: put claim
+        meta:
+          id: req_f7c0f27eb73e4d3eb1e4b65d9b4556c7
+          created: 1751027132049
+          modified: 1751027392539
+          isPrivate: false
+          sortKey: -1749983866746
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/claims/1
+        name: delete claim
+        meta:
+          id: req_02404110953f4c90bad47be1950c23a0
+          created: 1751027132050
+          modified: 1751027396360
+          isPrivate: false
+          sortKey: -1749462376996
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/claims
+        name: get claim
+        meta:
+          id: req_c187293e9e754f2991e88f29bd473379
+          created: 1751027132051
+          modified: 1751027400085
+          isPrivate: false
+          sortKey: -1749201632121
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/claims
+        name: post claim
+        meta:
+          id: req_01b125aaa3f541b0935c013823ead0c2
+          created: 1751027132052
+          modified: 1751027403713
+          isPrivate: false
+          sortKey: -1749071259683.5
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      url:
+        base_url: http://localhost:8080
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_51598ea66ef4c30689f604ff296e2ea294634c51
+    created: 1751024177339
+    modified: 1751024177339
+environments:
+  name: Base Environment
+  meta:
+    id: env_51598ea66ef4c30689f604ff296e2ea294634c51
+    created: 1751024177337
+    modified: 1751024177337
+    isPrivate: false
