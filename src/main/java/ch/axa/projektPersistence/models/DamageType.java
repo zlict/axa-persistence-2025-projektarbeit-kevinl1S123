@@ -4,8 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Getter;
-import lombok.Setter;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,8 +16,6 @@ import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "damageType")
-@Getter
-@Setter
 public class DamageType {
 
     @Id
@@ -31,6 +27,32 @@ public class DamageType {
     private String type;
 
     @ManyToMany(mappedBy = "damageTypes")
-    @JsonIgnoreProperties(value = {"damageTypes", "vertrag", "customer", "claims", "payments", "policen"})
+    @JsonIgnoreProperties("damageTypes")
     private Set<Claim> claims = new HashSet<>();
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Set<Claim> getClaims() {
+        return claims;
+    }
+
+    public void setClaims(Set<Claim> claims) {
+        this.claims = claims;
+    }
+
+    
 }
