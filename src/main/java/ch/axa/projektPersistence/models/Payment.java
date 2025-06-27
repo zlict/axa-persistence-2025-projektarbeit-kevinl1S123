@@ -40,7 +40,7 @@ public class Payment {
     private LocalDateTime dueDate;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "payments")
+    @JsonIgnoreProperties(value = {"payments", "vertrage", "claims", "policen"})
     private Vertrag vertrag;
 
 }

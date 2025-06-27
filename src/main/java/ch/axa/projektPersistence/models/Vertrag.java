@@ -39,13 +39,15 @@ public class Vertrag {
     private String state;
 
     @OneToMany(mappedBy = "vertrag")
+    @JsonIgnoreProperties(value = {"vertrag"})
     private Set<Payment> payments = new HashSet<>();
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "vertrage")
+    @JsonIgnoreProperties(value = {"vertrage"})
     private Customer customer;
 
     @OneToMany(mappedBy = "vertrag")
+    @JsonIgnoreProperties(value = {"vertrag", "damageTypes"})
     private Set<Claim> claims = new HashSet<>();
 
 }

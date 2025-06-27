@@ -24,7 +24,7 @@ public class Police {
     private double amountInsured;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "policen")
+    @JsonIgnoreProperties(value = {"policen", "vertrage", "claims", "payments"})
     private Vertrag vertrag;
 
 }

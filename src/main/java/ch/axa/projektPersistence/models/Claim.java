@@ -46,11 +46,11 @@ public class Claim {
     private String description;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "claims")
+    @JsonIgnoreProperties(value = {"claims", "vertrage", "payments", "policen"})
     private Vertrag vertrag;
 
     @ManyToMany
-    @JsonIgnoreProperties(value = "claims")
+    @JsonIgnoreProperties(value = {"claims"})
     @JoinTable(name = "claim_damageType", joinColumns = @JoinColumn(name = "claims_id"), inverseJoinColumns = @JoinColumn(name = "damageType_id"))
     private Set<DamageType> damageTypes = new HashSet<>();
 

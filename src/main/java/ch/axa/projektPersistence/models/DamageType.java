@@ -31,7 +31,7 @@ public class DamageType {
     private String type;
 
     @ManyToMany(mappedBy = "damageTypes")
-    @JsonIgnoreProperties("damageTypes")
+    @JsonIgnoreProperties(value = {"damageTypes", "vertrag", "customer", "claims", "payments", "policen"})
     private Set<Claim> claims = new HashSet<>();
 
     

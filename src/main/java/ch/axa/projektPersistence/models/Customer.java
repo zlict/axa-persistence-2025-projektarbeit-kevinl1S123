@@ -47,7 +47,7 @@ public class Customer {
     @Column(name = "phoneNumber", length = 5000)
     private String phoneNumber;
 
-    @JsonIgnoreProperties(value = "customer")
+    @JsonIgnoreProperties(value = {"customer", "claims", "payments", "policen"})
     @OneToMany(mappedBy = "customer")
     private Set<Vertrag> vertrage = new HashSet<>();
 
