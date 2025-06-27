@@ -7,6 +7,8 @@ import java.util.Set;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,15 +22,19 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Past;
 
 @Entity
 @Table(name = "claim")
+@Getter
+@Setter
 public class Claim {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Past
     @NotNull(message = "Bitte Fälligkeitsdatum eingeben!")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "date", nullable = false)
@@ -42,62 +48,11 @@ public class Claim {
     private String description;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "claims")
+    @JsonIgnoreProperties(value = {"claims", "vertrage", "payments", "policen"})
     private Vertrag vertrag;
 
     @ManyToMany
-    @JsonIgnoreProperties(value = "claims")
+    @JsonIgnoreProperties(value = {"claims"})
     @JoinTable(name = "claim_damageType", joinColumns = @JoinColumn(name = "claims_id"), inverseJoinColumns = @JoinColumn(name = "damageType_id"))
     private Set<DamageType> damageTypes = new HashSet<>();
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Vertrag getVertrag() {
-        return vertrag;
-    }
-
-    public void setVertrag(Vertrag vertrag) {
-        this.vertrag = vertrag;
-    }
-
-    public Set<DamageType> getDamageTypes() {
-        return damageTypes;
-    }
-
-    public void setDamageTypes(Set<DamageType> damageTypes) {
-        this.damageTypes = damageTypes;
-    }
-
-
-    
 }
