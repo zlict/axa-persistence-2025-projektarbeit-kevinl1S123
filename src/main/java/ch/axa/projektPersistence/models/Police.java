@@ -1,15 +1,13 @@
 package ch.axa.projektPersistence.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Positive;
+import lombok.Getter;
+import lombok.Setter;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-
+@Getter
+@Setter
 @Entity
 @Table(name = "police")
 public class Police {
@@ -21,6 +19,7 @@ public class Police {
     @Column(name = "type")
     private String type;
 
+    @Positive
     @Column(name = "amountInsured")
     private double amountInsured;
 
@@ -28,38 +27,4 @@ public class Police {
     @JsonIgnoreProperties(value = "policen")
     private Vertrag vertrag;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public double getAmountInsured() {
-        return amountInsured;
-    }
-
-    public void setAmountInsured(double amountInsured) {
-        this.amountInsured = amountInsured;
-    }
-
-    public Vertrag getVertrag() {
-        return vertrag;
-    }
-
-    public void setVertrag(Vertrag vertrag) {
-        this.vertrag = vertrag;
-    }
-
-
-    
 }

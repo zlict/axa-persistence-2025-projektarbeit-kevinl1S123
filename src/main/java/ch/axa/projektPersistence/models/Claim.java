@@ -7,6 +7,8 @@ import java.util.Set;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,6 +25,8 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "claim")
+@Getter
+@Setter
 public class Claim {
 
     @Id
@@ -50,54 +54,4 @@ public class Claim {
     @JoinTable(name = "claim_damageType", joinColumns = @JoinColumn(name = "claims_id"), inverseJoinColumns = @JoinColumn(name = "damageType_id"))
     private Set<DamageType> damageTypes = new HashSet<>();
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Vertrag getVertrag() {
-        return vertrag;
-    }
-
-    public void setVertrag(Vertrag vertrag) {
-        this.vertrag = vertrag;
-    }
-
-    public Set<DamageType> getDamageTypes() {
-        return damageTypes;
-    }
-
-    public void setDamageTypes(Set<DamageType> damageTypes) {
-        this.damageTypes = damageTypes;
-    }
-
-
-    
 }

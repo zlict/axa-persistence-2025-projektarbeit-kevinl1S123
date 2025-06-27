@@ -7,6 +7,8 @@ import java.util.Set;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,6 +22,8 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "vertrag")
+@Getter
+@Setter
 public class Vertrag {
 
     @Id
@@ -43,53 +47,5 @@ public class Vertrag {
 
     @OneToMany(mappedBy = "vertrag")
     private Set<Claim> claims = new HashSet<>();
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getStartingDate() {
-        return startingDate;
-    }
-
-    public void setStartingDate(LocalDateTime startingDate) {
-        this.startingDate = startingDate;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public Set<Payment> getPayments() {
-        return payments;
-    }
-
-    public void setPayments(Set<Payment> payments) {
-        this.payments = payments;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public Set<Claim> getClaims() {
-        return claims;
-    }
-
-    public void setClaims(Set<Claim> claims) {
-        this.claims = claims;
-    }
 
 }
