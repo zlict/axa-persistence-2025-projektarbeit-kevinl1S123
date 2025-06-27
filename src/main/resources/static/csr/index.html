@@ -10,47 +10,59 @@
         <script src="entries.js" type="application/javascript"></script>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/csr/index.html">Entries</a></li>
-                <li><a href="/csr/categories.html">Categories</a></li>
-                <li><a href="/csr/tags.html">Tags</a></li>
-            </ul>
-        </nav>
-        <h2>Manage entries</h2>
-        <form id="entryForm">
-            <input type="hidden" name="id" />
-            <label for="categorySelect">Category</label>
-            <select name="category" id="categorySelect" required>
-                <option disabled>No categories</option>
-            </select>
-            <label for="tagsSelect">Tags</label>
-            <div id="tagsSelect">No tags</div>
-            <label for="checkInInput">Check in</label>
-            <input type="date" name="checkInDate" id="checkInInput" required>
-            <input type="time" name="checkInTime" required>
-            <label for="duration">Duration</label>
-            <input type="number" name="duration" id="duration" required>
-            <label for="Description">Description</label>
-            <input type="text" name="description" id="Description" required>
-            <input type="submit" value="Save" />
-        </form>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Category</th>
-                    <th>Tags</th>
-                    <th>Check in</th>
-                    <th>duration</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody id="entryDisplay">
-                <tr>
-                    <td colspan="3">Loading...</td>
-                </tr>
-            </tbody>
-        </table>
+        <h1>Versicherungsverwaltung</h1>
+        <div class="menu">
+            <div class="menu-card" onclick="window.location.href='customers.html'">
+                <h2>Kunden</h2>
+                <p>Verwalten Sie alle Kunden</p>
+            </div>
+            <div class="menu-card" onclick="window.location.href='vertraege.html'">
+                <h2>Verträge</h2>
+                <p>Verwalten Sie alle Verträge</p>
+            </div>
+            <div class="menu-card" onclick="window.location.href='policen.html'">
+                <h2>Policen</h2>
+                <p>Verwalten Sie alle Policen</p>
+            </div>
+            <div class="menu-card" onclick="window.location.href='claims.html'">
+                <h2>Schadenfälle</h2>
+                <p>Verwalten Sie alle Schadenfälle</p>
+            </div>
+            <div class="menu-card" onclick="window.location.href='payments.html'">
+                <h2>Zahlungen</h2>
+                <p>Verwalten Sie alle Zahlungen</p>
+            </div>
+            <div class="menu-card" onclick="window.location.href='damagetypes.html'">
+                <h2>Schadentypen</h2>
+                <p>Verwalten Sie alle Schadentypen</p>
+            </div>
+        </div>
+        <style>
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                justify-content: center;
+                margin-top: 3rem;
+            }
+            .menu-card {
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                padding: 2rem 3rem;
+                text-align: center;
+                cursor: pointer;
+                transition: box-shadow 0.2s;
+                min-width: 180px;
+            }
+            .menu-card:hover {
+                box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+                background: #f0f8ff;
+            }
+            .menu-card h2 {
+                margin: 0 0 0.5rem 0;
+                font-size: 1.3rem;
+            }
+        </style>
     </body>
 </html>

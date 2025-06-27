@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Zahlungen verwalten</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Zahlungen</h1>
+    <div id="payment-form-container">
+        <form id="payment-form">
+            <input type="hidden" id="payment-id">
+            <input type="number" id="payment-amount" placeholder="Betrag" required>
+            <input type="date" id="payment-dueDate" placeholder="Fälligkeitsdatum" required>
+            <button type="submit">Speichern</button>
+            <button type="button" id="cancel-edit-payment" style="display:none">Abbrechen</button>
+        </form>
+    </div>
+    <table id="payments-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Betrag</th>
+                <th>Fälligkeitsdatum</th>
+                <th>Vertrag</th>
+                <th>Aktionen</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button onclick="window.location.href='index.html'">Zurück zur Übersicht</button>
+    <script src="payments.js"></script>
+</body>
+</html>

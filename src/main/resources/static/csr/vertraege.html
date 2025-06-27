@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Vertragsverwaltung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Vertragsverwaltung</h1>
+    <div id="vertrag-form-container">
+        <form id="vertrag-form">
+            <input type="hidden" id="vertrag-id">
+            <input type="text" id="vertrag-state" placeholder="Status" required>
+            <input type="date" id="vertrag-start" placeholder="Startdatum" required>
+            <input type="date" id="vertrag-end" placeholder="Enddatum">
+            <button type="submit">Speichern</button>
+            <button type="button" id="cancel-edit-vertrag" style="display:none">Abbrechen</button>
+        </form>
+    </div>
+    <table id="vertraege-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+                <th>Startdatum</th>
+                <th>Enddatum</th>
+                <th>Kunde</th>
+                <th>Aktionen</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button onclick="window.location.href='index.html'">Zurück zur Übersicht</button>
+    <script src="vertraege.js"></script>
+</body>
+</html>
