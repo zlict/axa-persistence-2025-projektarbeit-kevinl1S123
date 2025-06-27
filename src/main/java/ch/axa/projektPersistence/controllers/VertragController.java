@@ -6,13 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/vertraege")
+@RequestMapping("/vertrage")
 public class VertragController {
     @Autowired
     private VertragRepository vertragRepository;
 
     @GetMapping
-    public Iterable<Vertrag> getAllVertraege() {
+    public Iterable<Vertrag> getAllVertraege(@RequestParam(required = false) String filterByState) {
+
+        if (filterByState != null) {
+            return vertragRepository.findByState(filterByState);
+        }
+
         return vertragRepository.findAll();
     }
 
